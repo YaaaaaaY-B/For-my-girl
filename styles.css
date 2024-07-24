@@ -1,0 +1,191 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to left, #a8c0a8 0%, #c5d5c5 100%);
+    position: relative;
+}
+
+.tulip-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1000px; /* Increased height to accommodate multiple lines */
+    overflow: hidden; /* Ensure any overflow is hidden */
+    z-index: -1; /* Places the tulips behind other content */
+}
+
+/* Lines of tulips */
+.tulip-bottom::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Height of each tulip line */
+    background: url('tulip.png') repeat-x bottom center; /* Repeat the tulip image horizontally */
+    background-size: 100px auto; /* Adjust width based on your image size */
+    bottom: 0;
+}
+
+.tulip-bottom::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Same height as before */
+    background: url('tulip.png') repeat-x bottom center; /* Repeat the tulip image horizontally */
+    background-size: 100px auto; /* Adjust width based on your image size */
+    bottom: 0px; /* Position the second line to overlap the first line */
+    opacity: 0.8; /* Adjust opacity to create an overlapping effect */
+    margin-left: 12px;
+}
+
+/* Additional lines of tulips */
+.tulip-bottom .line-3 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Same height as before */
+    background: url('tulip.png') repeat-x bottom center; /* Repeat the tulip image horizontally */
+    background-size: 100px auto; /* Adjust width based on your image size */
+    bottom: 0px; /* Position additional line */
+    opacity: 0.8;
+    margin-left: 32px;
+}
+
+.tulip-bottom .line-4 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('tulip.png') repeat-x bottom center;
+    background-size: 100px auto;
+    bottom: 0px;
+    opacity: 0.7;
+    margin-left: 22px;
+}
+
+.tulip-bottom .line-5 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('tulip.png') repeat-x bottom center;
+    background-size: 100px auto;
+    bottom: 0px;
+    opacity: 0.7;
+    margin-left: 22px;
+}
+
+.tulip-bottom .line-6 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('tulip.png') repeat-x bottom center;
+    background-size: 100px auto;
+    bottom: 0px;
+    opacity: 0.6;
+    margin-left: 22px;
+}
+
+.tulip-bottom .line-7 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('tulip.png') repeat-x bottom center;
+    background-size: 100px auto;
+    bottom: 0px;
+    opacity: 0.6;
+    margin-left: 22px;
+}
+
+.tulip-bottom .line-8 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('tulip.png') repeat-x bottom center;
+    background-size: 100px auto;
+    bottom: 0px;
+    opacity: 0.5;
+    margin-left: 22px;
+}
+
+.tulip-bottom .line-9 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('tulip.png') repeat-x bottom center;
+    background-size: 100px auto;
+    bottom: 0px;
+    opacity: 0.5;
+    margin-left: 22px;
+}
+
+.tulip-bottom .line-10 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('tulip.png') repeat-x bottom center;
+    background-size: 100px auto;
+    bottom: 0px;
+    opacity: 0.4;
+    margin-left: 22px;
+}
+
+h1 {
+    color: #4a7856;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#quoteDisplay {
+    --c: #ff69b4; /* Pink color for the heart */
+    width: 200px;
+    aspect-ratio: 1;
+    background:
+        radial-gradient(at 70% 31%, var(--c) 29%, #0000 30%),
+        radial-gradient(at 30% 31%, var(--c) 29%, #0000 30%),
+        conic-gradient(from -45deg at 50% 84%, var(--c) 90deg, #0000 0) 
+        bottom/100% 50% no-repeat;
+    color: #ffffff; /* White text for contrast */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 0%;
+    position: relative;
+    overflow: hidden;
+}
+
+#quoteText {
+    margin-top: -23px; /* Adjust the value to move text up */
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #4a7856; /* Sage green */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    margin-left: 55px;
+}
+
+button:hover {
+    background-color: #5a7359; /* Darker sage green */
+}
