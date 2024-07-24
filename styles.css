@@ -1,0 +1,59 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to left, #a8c0a8 0%, #c5d5c5 100%);
+    position: relative;
+}
+
+h1 {
+    color: #4a7856;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#quoteDisplay {
+    --c: #ff69b4; /* Pink color for the heart */
+    width: 200px;
+    aspect-ratio: 1;
+    background:
+        radial-gradient(at 70% 31%, var(--c) 29%, #0000 30%),
+        radial-gradient(at 30% 31%, var(--c) 29%, #0000 30%),
+        conic-gradient(from -45deg at 50% 84%, var(--c) 90deg, #0000 0) 
+        bottom/100% 50% no-repeat;
+    color: #ffffff; /* White text for contrast */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 0%;
+    position: relative;
+    overflow: hidden;
+}
+
+#quoteText {
+    margin-top: -23px; /* Adjust the value to move text up */
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #4a7856; /* Sage green */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    margin-left: 55px;
+}
+
+button:hover {
+    background-color: #5a7359; /* Darker sage green */
+}
